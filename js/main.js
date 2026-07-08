@@ -1,34 +1,56 @@
 /**
- * AutoMate AI — Main Script
- * Minimal JS for performance. Handles mobile nav and smooth scrolling.
+ * AutoMate AI — Premium UI interactions
+ * Lightweight, no dependencies. Covers:
+ *  - Mobile nav toggle
+ *  - Scroll reveal animations (IntersectionObserver)
+ *  - Smooth anchor scroll
+ *  - Newsletter handler
+ *  - Search handler
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  // --- Mobile Menu Toggle ---
+  'use strict';
+
+  // ---------- Mobile Nav ----------
   const toggleBtn = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
-
   if (toggleBtn && navLinks) {
     toggleBtn.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('open');
-      toggleBtn.setAttribute('aria-expanded', isOpen);
+      const open = navLinks.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', open);
+      toggleBtn.innerHTML = open
+        ? '<svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-close"/></svg>'
+        : '<svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-menu"/></svg>';
     });
-
-    // Close menu when clicking a link
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
         navLinks.classList.remove('open');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-menu"/></svg>';
       });
     });
   }
 
-  // --- Smooth Scroll for Anchor Links ---
+  // ---------- Scroll Reveal ----------
+  const revealEls = document.querySelectorAll('.reveal');
+  if (revealEls.length) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  }
+
+  // ---------- Smooth Anchor Scroll ----------
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      const href = anchor.getAttribute('href');
+      var href = anchor.getAttribute('href');
       if (href === '#') return;
-      const target = document.querySelector(href);
+      var target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -36,53 +58,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // --- Newsletter Form Placeholder Handler ---
-  const newsletterForms = document.querySelectorAll('.newsletter-form');
-  newsletterForms.forEach(function (form) {
+  // ---------- Newsletter ----------
+  document.querySelectorAll('.newsletter-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var email = form.querySelector('input[type="email"]').value.trim();
-      if (email) {
-        // In production, this would POST to your email service
-        // For now, show a success message
-        var btn = form.querySelector('button');
-        var originalText = btn.textContent;
-        btn.textContent = '✓ Subscribed!';
-        btn.style.background = '#10b981';
-        form.querySelector('input[type="email"]').disabled = true;
-        setTimeout(function () {
-          btn.textContent = originalText;
-          btn.style.background = '';
-          form.querySelector('input[type="email"]').disabled = false;
-          form.querySelector('input[type="email"]').value = '';
-        }, 3000);
-        console.log('Newsletter signup:', email);
-      }
+      var input = form.querySelector('input[type="email"]');
+      var btn = form.querySelector('button');
+      var email = input.value.trim();
+      if (!email) return;
+      btn.disabled = true;
+      btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-check"/></svg> Subscribed!';
+      btn.style.background = 'linear-gradient(135deg, #8BA86A, #C9A84C)';
+      input.disabled = true;
+      console.log('[AutoMate] Newsletter:', email);
+      setTimeout(function () {
+        btn.disabled = false;
+        btn.innerHTML = 'Subscribe';
+        btn.style.background = '';
+        input.disabled = false;
+        input.value = '';
+      }, 3000);
     });
   });
 
-  // --- Search Box Placeholder ---
-  var searchBoxes = document.querySelectorAll('.search-box');
-  searchBoxes.forEach(function (box) {
+  // ---------- Search ----------
+  document.querySelectorAll('.search-box').forEach(function (box) {
     var input = box.querySelector('input');
     var btn = box.querySelector('button');
     if (btn && input) {
       btn.addEventListener('click', function () {
         var q = input.value.trim();
-        if (q) {
-          window.location.href = '/blog/?q=' + encodeURIComponent(q);
-        }
+        if (q) window.location.href = '/blog/?q=' + encodeURIComponent(q);
       });
       input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-          btn.click();
-        }
+        if (e.key === 'Enter') btn.click();
       });
     }
   });
 });
-
-// --- Register Service Worker for offline support (future) ---
-// if ('serviceWorker' in navigator) {
-//   navigator.serviceWorker.register('/sw.js');
-// }

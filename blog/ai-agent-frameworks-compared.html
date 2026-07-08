@@ -3,221 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen & More | AutoMate AI</title>
-  <meta name="description" content="Comprehensive comparison of AI agent frameworks. LangChain vs CrewAI vs AutoGen vs others. Build multi-agent systems that actually work.">
+  <title>AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen — AutoMate AI</title>
+  <meta name="description" content="Comprehensive comparison of the top AI agent frameworks: LangChain, CrewAI, AutoGen, and more. Features, pricing, and when to use each.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://automateai.com/blog/ai-agent-frameworks-compared.html">
+  <link rel="canonical" href="https://automate-ai-ruby.vercel.app/blog/ai-agent-frameworks-compared.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen & More">
-  <meta property="og:description" content="Comprehensive comparison of AI agent frameworks for building multi-agent systems.">
-  <meta property="og:url" content="https://automateai.com/blog/ai-agent-frameworks-compared.html">
+  <meta property="og:title" content="AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen">
+  <meta property="og:description" content="Comprehensive comparison of the top AI agent frameworks for building multi-agent systems.">
+  <meta property="og:url" content="https://automate-ai-ruby.vercel.app/blog/ai-agent-frameworks-compared.html">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen & More",
-    "description": "Comprehensive comparison of AI agent frameworks.",
+    "headline": "AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen",
+    "description": "Comprehensive comparison of the top AI agent frameworks for building multi-agent systems.",
     "author": {"@type": "Person", "name": "AutoMate AI"},
     "datePublished": "2024-12-28",
     "dateModified": "2025-01-10",
     "publisher": {"@type": "Organization", "name": "AutoMate AI"},
-    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://automateai.com/blog/ai-agent-frameworks-compared.html"}
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://automate-ai-ruby.vercel.app/blog/ai-agent-frameworks-compared.html"}
   }
   </script>
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://automateai.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://automateai.com/blog/" },
-    { "@type": "ListItem", "position": 3, "name": "AI Agent Frameworks Compared", "item": "https://automateai.com/blog/ai-agent-frameworks-compared.html" }
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://automate-ai-ruby.vercel.app/"},
+    {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://automate-ai-ruby.vercel.app/blog/"},
+    {"@type": "ListItem", "position": 3, "name": "AI Agent Frameworks Compared", "item": "https://automate-ai-ruby.vercel.app/blog/ai-agent-frameworks-compared.html"}
   ]}
   </script>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23C9A84C'/%3E%3Cstop offset='100%25' stop-color='%237EB8E0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='6' fill='%230C0C0C'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='20' font-weight='800' font-family='-apple-system,sans-serif' fill='url(%23a)'%3EA%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
 <header role="banner">
   <nav role="navigation" aria-label="Main navigation">
-    <a href="/" class="logo"><span>⚡</span> AutoMate <span>AI</span></a>
-    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <a href="/" class="logo">
+      <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-bolt"/></svg>
+      Auto<span>Mate</span> <span>AI</span>
+    </a>
+    <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-menu"/></svg>
+    </button>
     <div class="nav-links" role="menubar">
       <a href="/" role="menuitem">Home</a>
       <a href="/blog/" role="menuitem">Articles</a>
       <a href="/about.html" role="menuitem">About</a>
       <a href="/contact.html" role="menuitem">Contact</a>
-      <a href="/blog/" class="nav-cta" role="menuitem">Explore →</a>
+      <a href="/blog/" class="nav-cta" role="menuitem">Explore <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-arrow-right"/></svg></a>
     </div>
   </nav>
 </header>
 
-<main id="main" role="main">
-  <article class="article">
-    <div class="article-header">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="/">Home</a> › <a href="/blog/">Articles</a> › <span>AI Agent Frameworks Compared</span>
-      </nav>
-      <h1>AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen & More</h1>
-      <div class="article-meta">
-        <span>📅 <time datetime="2024-12-28">December 28, 2024</time></span>
-        <span>📝 Guides</span>
-        <span>⏱ 14 min read</span>
-      </div>
-    </div>
+<main id="main" role="main" class="article-page">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;opacity:0.4;"><use href="/images/icons.svg#icon-chevron-right"/></svg>
+      <a href="/blog/">Articles</a>
+      <svg class="icon" viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;opacity:0.4;"><use href="/images/icons.svg#icon-chevron-right"/></svg>
+      <span>AI Agent Frameworks Compared</span>
+    </nav>
 
-    <div class="toc">
-      <h3>📑 Table of Contents</h3>
-      <ul>
-        <li><a href="#intro">Why Agent Frameworks Matter</a></li>
-        <li><a href="#langchain">LangChain</a></li>
-        <li><a href="#crewai">CrewAI</a></li>
-        <li><a href="#autogen">AutoGen (Microsoft)</a></li>
-        <li><a href="#comparison">Comparison Table</a></li>
-        <li><a href="#pick">Which One Should You Pick?</a></li>
-      </ul>
-    </div>
-
-    <div class="disclosure">
-      <strong>🔗 Affiliate Disclosure:</strong> Some links are affiliate links. We may earn a commission at no extra cost to you.
-    </div>
-
-    <div class="article-body">
-      <section id="intro">
-        <p>Multi-agent AI systems are the next frontier of automation. Instead of a single LLM call, you have <strong>multiple AI agents working together</strong> — planning tasks, delegating subtasks, reviewing outputs, and iterating.</p>
-        <p>But the framework landscape is confusing. LangChain, CrewAI, AutoGen, Semantic Kernel, Practitioners — each takes a different approach. I've built production systems with all of them. Here's how they actually compare.</p>
-      </section>
-
-      <section id="langchain">
-        <h2>LangChain 🦜🔗</h2>
-        <p><strong>Best for:</strong> Maximum flexibility, production deployments, complex RAG pipelines.</p>
-        <p>LangChain is the most mature and widely adopted framework. It's not just an agent framework — it's a complete ecosystem for building LLM applications. LangGraph (their agent orchestration layer) lets you build complex agent workflows with cycles, conditionals, and human-in-the-loop.</p>
-        <p><strong>Pros:</strong> Most integrations, great documentation, LangSmith for debugging, huge community.</p>
-        <p><strong>Cons:</strong> Steep learning curve, complex abstractions, can be overkill for simple use cases.</p>
-        <p><strong>Best use case:</strong> Production systems that need reliability, monitoring, and complex multi-step reasoning.</p>
-      </section>
-
-      <section id="crewai">
-        <h2>CrewAI 👥</h2>
-        <p><strong>Best for:</strong> Rapid prototyping, role-based agent teams, developer velocity.</p>
-        <p>CrewAI takes a role-playing approach. You define agents with specific roles (e.g., "Researcher," "Writer," "Critic") and they collaborate on tasks. The API is clean and Pythonic — you can have a multi-agent system running in under 50 lines of code.</p>
-        <p><strong>Pros:</strong> Simplest API, fastest to get started, good for content generation workflows.</p>
-        <p><strong>Cons:</strong> Less control over execution flow, smaller community, can be unreliable for complex tasks.</p>
-        <p><strong>Best use case:</strong> Content teams, research workflows, rapid prototyping.</p>
-      </section>
-
-      <section id="autogen">
-        <h2>AutoGen (Microsoft) 🔄</h2>
-        <p><strong>Best for:</strong> Conversation-driven agent interactions, code generation, research.</p>
-        <p>AutoGen focuses on multi-agent conversations. Agents talk to each other to solve problems. It's particularly strong at code generation workflows — one agent writes code, another reviews it, a third executes it.</p>
-        <p><strong>Pros:</strong> Powerful conversation patterns, strong code execution support, good for research.</p>
-        <p><strong>Cons:</strong> Documentation is improving but still uneven, can be chatty (many API calls per task).</p>
-        <p><strong>Best use case:</strong> Code generation pipelines, research tasks, experimental multi-agent systems.</p>
-      </section>
-
-      <section id="comparison">
-        <h2>Quick Comparison Table</h2>
-        <div style="overflow-x:auto;">
-          <table style="width:100%; border-collapse:collapse; font-size:0.9rem; background:var(--bg-card); border-radius:8px; overflow:hidden; margin:20px 0;">
-            <thead>
-              <tr style="background:var(--accent); color:#fff;">
-                <th style="padding:12px 16px; text-align:left;">Feature</th>
-                <th style="padding:12px 16px; text-align:left;">LangChain</th>
-                <th style="padding:12px 16px; text-align:left;">CrewAI</th>
-                <th style="padding:12px 16px; text-align:left;">AutoGen</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:10px 16px; font-weight:600;">Learning Curve</td>
-                <td style="padding:10px 16px;">Steep</td>
-                <td style="padding:10px 16px;">Easy ✅</td>
-                <td style="padding:10px 16px;">Medium</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:10px 16px; font-weight:600;">Flexibility</td>
-                <td style="padding:10px 16px;">Maximum ✅</td>
-                <td style="padding:10px 16px;">Medium</td>
-                <td style="padding:10px 16px;">High</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:10px 16px; font-weight:600;">Community</td>
-                <td style="padding:10px 16px;">Largest ✅</td>
-                <td style="padding:10px 16px;">Growing</td>
-                <td style="padding:10px 16px;">Medium</td>
-              </tr>
-              <tr style="border-bottom:1px solid var(--border);">
-                <td style="padding:10px 16px; font-weight:600;">Production Ready</td>
-                <td style="padding:10px 16px;">Yes ✅</td>
-                <td style="padding:10px 16px;">Partial</td>
-                <td style="padding:10px 16px;">Partial</td>
-              </tr>
-              <tr>
-                <td style="padding:10px 16px; font-weight:600;">Best For</td>
-                <td style="padding:10px 16px;">Complex systems</td>
-                <td style="padding:10px 16px;">Quick prototypes</td>
-                <td style="padding:10px 16px;">Code & research</td>
-              </tr>
-            </tbody>
-          </table>
+    <article>
+      <div class="article-header reveal">
+        <h1>AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen</h1>
+        <div class="article-meta">
+          <span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-calendar"/></svg> <time datetime="2024-12-28">Dec 28, 2024</time></span>
+          <span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-user"/></svg> AutoMate AI</span>
+          <span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-clock"/></svg> 14 min read</span>
         </div>
-      </section>
+      </div>
 
-      <section id="pick">
-        <h2>Which One Should You Pick? 🎯</h2>
-        <p><strong>Start with CrewAI</strong> if you're new to agent frameworks. You'll have something running in an hour, and you can see if the multi-agent approach fits your use case.</p>
-        <p><strong>Use LangChain</strong> if you're building for production. The extra complexity pays off when you need reliability, monitoring, and complex orchestration.</p>
-        <p><strong>Try AutoGen</strong> if your use case revolves around code generation or research tasks where agents need to iterate and refine outputs.</p>
-        <p>👉 <a href="/blog/best-ai-automation-tools.html">Explore the best AI tools for your stack →</a></p>
-      </section>
-    </div>
+      <div class="toc card reveal">
+        <h3><svg class="icon" viewBox="0 0 24 24" style="fill:var(--gold);"><use href="/images/icons.svg#icon-document"/></svg> Table of Contents</h3>
+        <ul>
+          <li><a href="#overview">Why agent frameworks matter</a></li>
+          <li><a href="#langchain">LangChain</a></li>
+          <li><a href="#crewai">CrewAI</a></li>
+          <li><a href="#autogen">AutoGen</a></li>
+          <li><a href="#others">Other frameworks</a></li>
+          <li><a href="#comparison">Quick comparison table</a></li>
+          <li><a href="#which">Which should you choose?</a></li>
+        </ul>
+      </div>
 
-    <div class="author-bio">
-      <div class="author-avatar">AM</div>
-      <div>
-        <h4>AutoMate AI Team</h4>
-        <p>We build with these frameworks so you don't have to guess. Honest, hands-on comparisons.</p>
+      <div class="article-body">
+        <p>AI agent frameworks let you build systems where AI agents work together — planning, delegating, and executing tasks autonomously. The space moves fast, with new entrants and major updates every quarter. Here's how the top frameworks compare.</p>
+
+        <section id="overview">
+          <h2>Why agent frameworks matter</h2>
+          <p>A single AI call is useful. But real power comes from <strong>multi-agent systems</strong> where specialized agents collaborate. A research agent gathers data, a writing agent compiles findings, a review agent checks quality — all running autonomously.</p>
+          <p>Frameworks provide the infrastructure: agent communication, tool integration, memory management, and orchestration.</p>
+        </section>
+
+        <section id="langchain">
+          <h2>LangChain</h2>
+          <p><strong>LangChain</strong> is the most mature and widely adopted framework. It started as a simple wrapper around LLM APIs and evolved into a comprehensive ecosystem with LangSmith (observability), LangServe (deployment), and LangGraph (graph-based agents).</p>
+          <p><strong>Strengths:</strong> Massive community, extensive tool integrations (500+), built-in monitoring, supports all major models.</p>
+          <p><strong>Weaknesses:</strong> Steep learning curve, API instability across versions, overkill for simple use cases.</p>
+          <p><strong>Best for:</strong> Production systems, complex multi-step agents, teams that need observability.</p>
+        </section>
+
+        <section id="crewai">
+          <h2>CrewAI</h2>
+          <p><strong>CrewAI</strong> focuses on making multi-agent systems simple. You define "agents" with roles and goals, then assemble them into "crews" that work together. Its API is the most intuitive of the major frameworks.</p>
+          <p><strong>Strengths:</strong> Clean API, fast to prototype, great documentation, built-in delegation between agents.</p>
+          <p><strong>Weaknesses:</strong> Less flexible than LangChain for custom tooling, fewer third-party integrations, still maturing for production.</p>
+          <p><strong>Best for:</strong> Rapid prototyping, small to medium multi-agent systems, teams new to agent frameworks.</p>
+        </section>
+
+        <section id="autogen">
+          <h2>AutoGen</h2>
+          <p><strong>AutoGen</strong> by Microsoft Research takes a conversation-centric approach. Agents communicate through structured dialogues, making it natural to build systems where agents debate, critique, and refine each other's work.</p>
+          <p><strong>Strengths:</strong> Excellent for agent-to-agent conversation patterns, strong typing, built-in code execution, flexible agent topologies.</p>
+          <p><strong>Weaknesses:</strong> Smaller community, documentation can be dense, less integrated tool ecosystem.</p>
+          <p><strong>Best for:</strong> Research, code generation agents, systems requiring complex agent interaction patterns.</p>
+        </section>
+
+        <section id="others">
+          <h2>Other notable frameworks</h2>
+          <div class="feature-card card" style="padding: 20px; margin-bottom: 12px;">
+            <h3>Semantic Kernel</h3>
+            <p>Microsoft's enterprise-focused SDK. Deeply integrated with Azure, C# and Python. Strong for organizations already on Microsoft stack.</p>
+          </div>
+          <div class="feature-card card" style="padding: 20px; margin-bottom: 12px;">
+            <h3>Dify</h3>
+            <p>Open-source platform with a visual workflow builder. Good balance of power and accessibility, especially for non-developers.</p>
+          </div>
+          <div class="feature-card card" style="padding: 20px;">
+            <h3>Phi Data (phidata)</h3>
+            <p>Lightweight framework focused on data tasks. Good for building agents that work with databases, APIs, and files.</p>
+          </div>
+        </section>
+
+        <section id="comparison">
+          <h2>Quick comparison table</h2>
+          <div class="table-wrap card">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>LangChain</th>
+                  <th>CrewAI</th>
+                  <th>AutoGen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Learning curve</td><td>Steep</td><td>Gentle</td><td>Moderate</td></tr>
+                <tr><td>Community size</td><td>Very large</td><td>Large</td><td>Moderate</td></tr>
+                <tr><td>Tool integrations</td><td>500+</td><td>100+</td><td>50+</td></tr>
+                <tr><td>Observability</td><td>Built-in (LangSmith)</td><td>External</td><td>External</td></tr>
+                <tr><td>Multi-agent</td><td>LangGraph</td><td>Native</td><td>Native</td></tr>
+                <tr><td>Production-ready</td><td>Yes</td><td>Getting there</td><td>Yes</td></tr>
+                <tr><td>License</td><td>MIT</td><td>MIT</td><td>MIT</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="which">
+          <h2>Which should you choose?</h2>
+          <div class="feature-card card" style="padding: 24px;">
+            <div class="icon-wrapper">
+              <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-check"/></svg>
+            </div>
+            <p><strong>Start with CrewAI</strong> if you're new to agent frameworks. Build your first multi-agent system in an afternoon. Move to LangChain when you need production observability or custom tooling.</p>
+          </div>
+          <div class="feature-card card" style="padding: 24px; margin-top: 12px;">
+            <div class="icon-wrapper" style="background: rgba(126,184,224,0.1); border-color: rgba(126,184,224,0.15);">
+              <svg class="icon" viewBox="0 0 24 24" style="fill: var(--blue);"><use href="/images/icons.svg#icon-gear"/></svg>
+            </div>
+            <p><strong>Choose LangChain</strong> for production systems. The investment in learning pays off when you need monitoring, A/B testing, and reliable deployment.</p>
+          </div>
+          <p style="margin-top: 24px;">And try <strong>AutoGen</strong> when you need sophisticated agent conversations — code review teams, research debates, or multi-step validation workflows.</p>
+        </section>
+      </div>
+
+      <div class="author-bio card">
+        <div class="author-avatar">AM</div>
+        <div>
+          <h4>AutoMate AI Team</h4>
+          <p>We test every tool we recommend. No sponsorships, no fluff.</p>
+        </div>
+      </div>
+
+      <div class="related-posts">
+        <h3>Read next</h3>
+        <div class="grid-3">
+          <article class="post-card card">
+            <div class="post-icon"><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-ai"/></svg></div>
+            <span class="post-category">Reviews</span>
+            <h3><a href="/blog/best-ai-automation-tools.html">12 Best AI Automation Tools</a></h3>
+            <div class="post-meta"><span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-clock"/></svg> 18 min</span></div>
+          </article>
+          <article class="post-card card">
+            <div class="post-icon"><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-bolt"/></svg></div>
+            <span class="post-category">Guides</span>
+            <h3><a href="/blog/ai-workflow-automation-guide.html">AI Workflow Automation Guide</a></h3>
+            <div class="post-meta"><span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-clock"/></svg> 12 min</span></div>
+          </article>
+          <article class="post-card card">
+            <div class="post-icon"><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-chat"/></svg></div>
+            <span class="post-category">Comparisons</span>
+            <h3><a href="/blog/chatgpt-vs-claude-comparison.html">ChatGPT vs Claude</a></h3>
+            <div class="post-meta"><span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-clock"/></svg> 14 min</span></div>
+          </article>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="newsletter-card card reveal">
+        <div class="icon-wrapper">
+          <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-mail"/></svg>
+        </div>
+        <h2>Weekly automation digest</h2>
+        <p>One email per week. New tool reviews, workflow guides, and AI insights — zero spam.</p>
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
       </div>
     </div>
-
-    <div class="related-posts">
-      <h3>📖 You Might Also Like</h3>
-      <div class="posts-grid">
-        <article class="post-card">
-          <div class="post-card-image">🤖</div>
-          <div class="post-card-body">
-            <span class="post-card-category">Guides</span>
-            <h3><a href="/blog/ai-workflow-automation-guide.html">Complete Guide to AI Workflow Automation</a></h3>
-            <div class="post-meta"><span>📅 Jan 15, 2025</span><span>⏱ 12 min read</span></div>
-          </div>
-        </article>
-        <article class="post-card">
-          <div class="post-card-image">🛠️</div>
-          <div class="post-card-body">
-            <span class="post-card-category">Reviews</span>
-            <h3><a href="/blog/best-ai-automation-tools.html">12 Best AI Automation Tools 2025</a></h3>
-            <div class="post-meta"><span>📅 Jan 5, 2025</span><span>⏱ 18 min read</span></div>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="newsletter">
-      <h3>📬 Get the Weekly Automation Digest</h3>
-      <form class="newsletter-form" action="https://automateai.com/subscribe" method="post">
-        <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
-        <button type="submit">Subscribe Free →</button>
-      </form>
-    </div>
-  </article>
+  </section>
 </main>
 
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo"><span>⚡</span> AutoMate <span>AI</span></a>
-        <p>Automation guides and AI tool reviews to help you work smarter, not harder.</p>
+        <a href="/" class="logo">
+          <svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-bolt"/></svg>
+          Auto<span>Mate</span> <span>AI</span>
+        </a>
+        <p>Automation guides and AI tool reviews — built for a more productive world.</p>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
@@ -239,11 +263,11 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2025 AutoMate AI. All rights reserved.</span>
-      <span>Built with ⚡ for a more productive world.</span>
+      <span><svg class="icon" viewBox="0 0 24 24"><use href="/images/icons.svg#icon-bolt"/></svg> Built for a more productive world</span>
     </div>
   </div>
 </footer>
 
-<script src="/js/main.js" defer></script>
+<script defer src="/js/main.js"></script>
 </body>
 </html>
