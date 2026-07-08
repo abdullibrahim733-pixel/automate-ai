@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://automateai.com/sitemap.xml
+
+# Disallow admin/private areas
+Disallow: /contact-handler
+Disallow: /subscribe
+Disallow: /404.html
+
+# Crawl delay for politeness
+Crawl-delay: 10

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AutoMate AI</title>
+    <link>https://automateai.com/</link>
+    <description>Automation guides and AI tool reviews to help you work smarter, not harder.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://automateai.com/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>The Complete Guide to AI Workflow Automation in 2025</title>
+      <link>https://automateai.com/blog/ai-workflow-automation-guide.html</link>
+      <description>Step-by-step guide to automating your workflows with AI agents, no-code tools, and custom pipelines.</description>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://automateai.com/blog/ai-workflow-automation-guide.html</guid>
+    </item>
+
+    <item>
+      <title>ChatGPT vs Claude: Which AI Assistant Wins in 2025?</title>
+      <link>https://automateai.com/blog/chatgpt-vs-claude-comparison.html</link>
+      <description>Head-to-head comparison of GPT-4o vs Claude 3.5 Sonnet across coding, writing, reasoning, and real-world tasks.</description>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://automateai.com/blog/chatgpt-vs-claude-comparison.html</guid>
+    </item>
+
+    <item>
+      <title>12 Best AI Automation Tools You Need in 2025</title>
+      <link>https://automateai.com/blog/best-ai-automation-tools.html</link>
+      <description>We tested 40+ AI automation tools and picked the 12 that actually save time.</description>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://automateai.com/blog/best-ai-automation-tools.html</guid>
+    </item>
+
+    <item>
+      <title>AI Agent Frameworks Compared: LangChain, CrewAI, AutoGen & More</title>
+      <link>https://automateai.com/blog/ai-agent-frameworks-compared.html</link>
+      <description>Comprehensive comparison of the top AI agent frameworks for building multi-agent systems.</description>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://automateai.com/blog/ai-agent-frameworks-compared.html</guid>
+    </item>
+  </channel>
+</rss>
