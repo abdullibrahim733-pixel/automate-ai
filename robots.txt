@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://automateai.com/sitemap.xml
+Sitemap: https://www.a2mate.online/sitemap.xml
 
 # Disallow admin/private areas
 Disallow: /contact-handler
